@@ -3,8 +3,8 @@ import { useSelector, shallowEqual } from 'react-redux'
 const useClock = () => {
   return useSelector(
     (state) => ({
-      lastUpdate: state.lastUpdate,
-      light: state.light,
+      lastUpdate: state.clockReducer.lastUpdate,
+      light: state.clockReducer.light,
     }),
     shallowEqual
   )
